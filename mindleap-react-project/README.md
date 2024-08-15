@@ -12,8 +12,9 @@ Currently, two official plugins are available:
 
 1. Create Vite Framework using React JS -> npm create vite@latest mindleap-react-project
 2. Install Tailwind CSS -> [Link](https://tailwindcss.com/docs/guides/vite)
+3. Google Fonts (Google Search) 
 
 # Extension
 
 1. Tailwind CSS IntelliSense
-2. PostCSS Language Support
+2. ES7+ React/Redux/React-Native snippets
