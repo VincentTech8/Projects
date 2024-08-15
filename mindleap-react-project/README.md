@@ -12,9 +12,14 @@ Currently, two official plugins are available:
 
 1. Create Vite Framework using React JS -> npm create vite@latest mindleap-react-project
 2. Install Tailwind CSS -> [Link](https://tailwindcss.com/docs/guides/vite)
-3. Google Fonts (Google Search) 
+3. Google Fonts [Link](https://fonts.google.com/) 
 
 # Extension
 
 1. Tailwind CSS IntelliSense
 2. ES7+ React/Redux/React-Native snippets
+
+# Helpers
+
+1. React Icons [Link](https://react-icons.github.io/react-icons/)
+
