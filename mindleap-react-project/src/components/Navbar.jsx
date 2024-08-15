@@ -1,28 +1,53 @@
 // Type: rafce - to create the framework below
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { HiOutlineMenuAlt3 } from "react-icons/hi";
 
 const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
     const [activeSection, setActiveSection] = useState('home');
+
     const handleToggle = () => {
         setIsOpen(!isOpen);
     }
+
     const handleSelectedMenu = () => {
         setIsOpen(false);
     }
+
+    useEffect(() => {
+        window.addEventListener('scroll', handleScroll);
+        return () => window.removeEventListener('scroll', handleScroll);
+    }, []);
+
+    const handleScrollTo = (targetID) => {
+        const targetElement = document.getElementById(targetID);
+        if (targetElement) {
+            window.scrollTo({
+                top: targetElement.offsetTop,
+                behavior: 'smooth'
+            });
+        }
+    }
+
     const handleScroll = () => {
         const sections = ['home', 'services', 'about', 'pricing', 'testimonial'];
         const scrollPosition = window.scrollY + 100;
 
         sections.forEach(section => {
-            
-        })
+            if (element) {
+                const offsetTop = element.offsetTop;
+                const height = element.offsetHeight;
+                if (scrollPosition >= offsetTop && scrollPosition < offsetTop + height) {
+                    setActiveSection(section);
+                }
+            }
+        });
     }
+
     const navLinks = (
         <ul className='font-medium flex flex-col md:flex-row lg:space-x-8 sm:space-x-4 space-y-2 md:space-y-0 p-4 md:p-0'>
             <li>
-                <a href="#home" className={`text-white ${activeSection === 'home' ? 'isActive' : ''}`} onClick={(e) => {e.preventDefault(); handleSelectedMenu();}}>
+                <a href="#home" className={`text-white ${activeSection === 'home' ? 'isActive' : ''}`} onClick={(e) => { e.preventDefault(); handleSelectedMenu(); }}>
                     Home
                 </a>
             </li>
@@ -48,6 +73,7 @@ const Navbar = () => {
             </li>
         </ul>
     );
+
     return (
         <header className='bg-heroBg text-white py-6 px-4 fixed top-0 left-0 right-0 z-10'>
             <div className='container mx-auto flex justify-between items-center h-full'>
