@@ -22,4 +22,4 @@ Currently, two official plugins are available:
 # Helpers
 
 1. React Icons [Link](https://react-icons.github.io/react-icons/)
-
+2. Framer Motion [Link](https://www.framer.com/motion/)

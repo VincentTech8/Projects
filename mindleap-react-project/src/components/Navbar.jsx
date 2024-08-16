@@ -1,6 +1,7 @@
 // Type: rafce - to create the framework below
 import React, { useEffect, useState } from 'react'
 import { HiOutlineMenuAlt3 } from "react-icons/hi";
+import { motion } from "framer-motion"
 
 const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
@@ -10,20 +11,22 @@ const Navbar = () => {
         setIsOpen(!isOpen);
     }
 
-    const handleSelectedMenu = () => {
+    const handleCloseMenu = () => {
         setIsOpen(false);
     }
 
     useEffect(() => {
+        // The code that we want to run
         window.addEventListener('scroll', handleScroll);
+        // Optional return function - For clean up. Usually to reset a variable
         return () => window.removeEventListener('scroll', handleScroll);
-    }, []);
+    }, []); // The dependency array
 
     const handleScrollTo = (targetID) => {
         const targetElement = document.getElementById(targetID);
         if (targetElement) {
             window.scrollTo({
-                top: targetElement.offsetTop,
+                top: targetElement.offsetTop, // - 105
                 behavior: 'smooth'
             });
         }
@@ -31,9 +34,10 @@ const Navbar = () => {
 
     const handleScroll = () => {
         const sections = ['home', 'services', 'about', 'pricing', 'testimonial'];
-        const scrollPosition = window.scrollY + 100;
+        const scrollPosition = window.scrollY + 100; // 110
 
         sections.forEach(section => {
+            const element = document.getElementById(section);
             if (element) {
                 const offsetTop = element.offsetTop;
                 const height = element.offsetHeight;
@@ -47,29 +51,74 @@ const Navbar = () => {
     const navLinks = (
         <ul className='font-medium flex flex-col md:flex-row lg:space-x-8 sm:space-x-4 space-y-2 md:space-y-0 p-4 md:p-0'>
             <li>
-                <a href="#home" className={`text-white ${activeSection === 'home' ? 'isActive' : ''}`} onClick={(e) => { e.preventDefault(); handleSelectedMenu(); }}>
+                <motion.a
+                    href="#home"
+                    whileHover={{ scale: 1.1 }}
+                    whileTap={{ scale: 0.9 }}
+                    onClick={(e) => {
+                        e.preventDefault();
+                        handleCloseMenu();
+                        handleScrollTo('home');
+                    }}
+                    className={`text-white ${activeSection === 'home' ? 'isActive' : ''}`}>
                     Home
-                </a>
+                </motion.a>
             </li>
             <li>
-                <a href="#services" className={`text-white ${activeSection === 'services' ? 'isActive' : ''}`}>
+                <motion.a
+                    href="#services"
+                    whileHover={{ scale: 1.1 }}
+                    whileTap={{ scale: 0.9 }}
+                    onClick={(e) => {
+                        e.preventDefault();
+                        handleCloseMenu();
+                        handleScrollTo('services');
+                    }}
+                    className={`text-white ${activeSection === 'services' ? 'isActive' : ''}`}>
                     Services
-                </a>
+                </motion.a>
             </li>
             <li>
-                <a href="#about" className={`text-white ${activeSection === 'about' ? 'isActive' : ''}`}>
+                <motion.a
+                    href="#about"
+                    whileHover={{ scale: 1.1 }}
+                    whileTap={{ scale: 0.9 }}
+                    onClick={(e) => {
+                        e.preventDefault();
+                        handleCloseMenu();
+                        handleScrollTo('about');
+                    }}
+                    className={`text-white ${activeSection === 'about' ? 'isActive' : ''}`}>
                     About Us
-                </a>
+                </motion.a>
             </li>
             <li>
-                <a href="#pricing" className={`text-white ${activeSection === 'pricing' ? 'isActive' : ''}`}>
+                <motion.a
+                    href="#pricing"
+                    whileHover={{ scale: 1.1 }}
+                    whileTap={{ scale: 0.9 }}
+                    onClick={(e) => {
+                        e.preventDefault();
+                        handleCloseMenu();
+                        handleScrollTo('pricing');
+                    }}
+                    className={`text-white ${activeSection === 'pricing' ? 'isActive' : ''}`}>
                     Pricing
-                </a>
+                </motion.a>
             </li>
             <li>
-                <a href="#testimonial" className={`text-white ${activeSection === 'testimonial' ? 'isActive' : ''}`}>
+                <motion.a
+                    href="#testimonial"
+                    whileHover={{ scale: 1.1 }}
+                    whileTap={{ scale: 0.9 }}
+                    onClick={(e) => {
+                        e.preventDefault();
+                        handleCloseMenu();
+                        handleScrollTo('testimonial');
+                    }}
+                    className={`text-white ${activeSection === 'testimonial' ? 'isActive' : ''}`}>
                     Testimonial
-                </a>
+                </motion.a>
             </li>
         </ul>
     );
