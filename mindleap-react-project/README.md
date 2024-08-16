@@ -14,7 +14,7 @@ Currently, two official plugins are available:
 2. Install Tailwind CSS | [Link](https://tailwindcss.com/docs/guides/vite)
 3. Google Fonts | [Link](https://fonts.google.com/) 
 
-# Extension
+# VSCode Extension
 
 1. Tailwind CSS IntelliSense
 2. ES7+ React/Redux/React-Native snippets
