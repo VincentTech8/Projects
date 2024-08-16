@@ -1,5 +1,6 @@
 import React from 'react'
 import heroImg from "../assets/hero.webp"
+// React Icons here
 import { IoArrowForwardCircleSharp } from "react-icons/io5";
 
 const Hero = () => {

@@ -51,6 +51,7 @@ const Navbar = () => {
     const navLinks = (
         <ul className='font-medium flex flex-col md:flex-row lg:space-x-8 sm:space-x-4 space-y-2 md:space-y-0 p-4 md:p-0'>
             <li>
+                {/* Framer Motion here */}
                 <motion.a
                     href="#home"
                     whileHover={{ scale: 1.1 }}
