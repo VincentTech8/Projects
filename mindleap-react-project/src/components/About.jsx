@@ -1,8 +1,31 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 const About = () => {
+  const [isVideoPlaying, setIsVideoPlaying] = useState(false);
+
+  const handleVideoPlay = () => {
+    setIsVideoPlaying(true);
+  }
+
+  const handleCloseVideo = () => {
+    setIsVideoPlaying(false);
+  }
+
   return (
-    <div id='about' className='h-screen bg-orange-700'>About</div>
+    <div id='about' className='bg-[#f7f8fc] pb-16 pt-20'>
+      <div className='container mx-auto'>
+        <div className='py-12 px-4 md:w-4/5 mx-auto flex flex-col md:flex-row items-center gap-8'>
+          <div className='md:w-1/2 w-full mb-8 md:mb-0'>
+            {/* Left Side */}
+            
+          </div>
+          <div className='md:w-1/2 w-full'>
+            {/* Right Side */}
+            Right Side
+          </div>
+        </div>
+      </div>
+    </div>
   )
 }
 
