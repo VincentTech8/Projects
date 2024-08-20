@@ -18,7 +18,7 @@ const Hero = () => {
           <button className='bg-primary text-white py-3.5 px-8 font-medium rounded-md hover:bg-primary/90'>
             <a href="#contact" className='flex gap-1 items-center'>
               <span>Get Started</span>
-              <IoArrowForwardCircleSharp />
+              <IoArrowForwardCircleSharp className='size-5' />
             </a>
           </button>
         </div>

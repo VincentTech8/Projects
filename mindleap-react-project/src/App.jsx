@@ -5,6 +5,7 @@ import Navbar from './components/Navbar'
 import Pricing from './components/Pricing'
 import Services from './components/Services'
 import Testimonial from './components/Testimonial'
+import WorkingStep from './components/WorkingStep'
 
 function App() {
 
@@ -14,6 +15,7 @@ function App() {
       <Hero />
       <Services />
       <About />
+      <WorkingStep />
       <Pricing />
       <Testimonial />
     </div>

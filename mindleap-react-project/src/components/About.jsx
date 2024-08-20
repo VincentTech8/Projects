@@ -33,18 +33,18 @@ const About = () => {
               )
             }
           </div>
-          <div className='md:w-1/2 w-full'>
+          <div className='w-full md:w-1/2 px-4'>
             {/* Right Side */}
-            <h2 className='text-4xl font-secondary font-bold mb-4 leading-snug capitalize'>
+            <h2 className='text-3xl font-bold mb-4 font-secondary capitalize'>
               Individual consult and therapy
             </h2>
-            <p className='text-lg mb-12 md:pr-8'>
+            <p className='text-lg mb-8'>
               Dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit sed quia. Lorem Ipsum is simply dummy text.
             </p>
             <button className='bg-primary text-white py-3.5 px-8 font-medium rounded-md hover:bg-primary/90'>
               <a href="#contact" className='flex gap-1 items-center'>
                 <span>Get Started</span>
-                <IoArrowForwardCircleSharp />
+                <IoArrowForwardCircleSharp className='size-5' />
               </a>
             </button>
           </div>
