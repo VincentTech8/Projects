@@ -2,7 +2,9 @@ import React from 'react'
 
 const Testimonial = () => {
   return (
-    <div id='testimonial' className='h-screen bg-purple-700'>Testimonial</div>
+    <div id='testimonial' className='bg-[#f7f8fc] py-12'>
+      
+    </div>
   )
 }
 

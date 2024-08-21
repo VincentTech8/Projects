@@ -58,7 +58,7 @@ const Pricing = () => {
           </p>
         </div>
         {/* Packages / Prices */}
-        <div className='flex flex-col md:w-5/6 mx-auto md:flex-row gap-8 pb-12'>
+        <div className='flex flex-col md:w-5/6 mx-auto md:flex-row gap-8'>
           {
             packages.map((pkg, index) => (
               <div key={index} className='bg-white rounded-lg p-6 flex-1 shadow-lg'>
