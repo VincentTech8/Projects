@@ -42,7 +42,7 @@ const About = () => {
               Dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit sed quia. Lorem Ipsum is simply dummy text.
             </p>
             <button className='bg-primary text-white py-3.5 px-8 font-medium rounded-md hover:bg-primary/90'>
-              <a href="#contact" className='flex gap-1 items-center'>
+              <a href="/" className='flex gap-1 items-center'>
                 <span>Get Started</span>
                 <IoArrowForwardCircleSharp className='size-5' />
               </a>

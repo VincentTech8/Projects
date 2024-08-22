@@ -16,7 +16,7 @@ const Hero = () => {
             We lower our stress levels, we get to know our pain, we connect better, we improve our focus, and we're kinder to ourselves. Let us walk you through the basics in our new mindful guide on how to meditate.
           </p>
           <button className='bg-primary text-white py-3.5 px-8 font-medium rounded-md hover:bg-primary/90'>
-            <a href="#contact" className='flex gap-1 items-center'>
+            <a href="/" className='flex gap-1 items-center'>
               <span>Get Started</span>
               <IoArrowForwardCircleSharp className='size-5' />
             </a>

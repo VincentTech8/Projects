@@ -142,7 +142,7 @@ const Navbar = () => {
                 </div>
                 {/* Button */}
                 <div className='hidden md:block'>
-                    <a href="#contact" className='text-white bg-primary hover:bg-primary/90 px-4 py-2 rounded'>
+                    <a href="#contact" className='text-white bg-primary hover:bg-primary/90 px-4 py-2 rounded' onClick={(e) => { e.preventDefault(); handleScrollTo('contact'); }}>
                         Contact Us
                     </a>
                 </div>
@@ -162,7 +162,7 @@ const Navbar = () => {
                         <ul className='flex flex-col p-4 space-y-3'>
                             {navLinks.props.children}
                             <li className='py-2'>
-                                <a href="#contact" className='text-white bg-primary hover:bg-primary/90 px-4 py-2 rounded' onClick={(e) => { e.preventDefault(); handleSelectedMenu(); }}>
+                                <a href="#contact" className='text-white bg-primary hover:bg-primary/90 px-4 py-2 rounded' onClick={(e) => { e.preventDefault(); handleCloseMenu(); handleScrollTo('contact'); }}>
                                     Contact Us
                                 </a>
                             </li>
