@@ -11,6 +11,28 @@ const Contact = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
+        const data = {
+            name,
+            email,
+            phone,
+            country,
+            message
+        };
+        // console.log(data);
+        if (!data){
+            alert("Please fill all fields");
+            return;
+        }
+        setShowModal(true);
+    }
+
+    const closeModal = () => {
+        setShowModal(false);
+        setName("");
+        setEmail("");
+        setPhone("");
+        setCountry("");
+        setMessage("");
     }
 
     return (
@@ -84,14 +106,14 @@ const Contact = () => {
                         </h2>
                         <form className='space-y-8' onSubmit={handleSubmit}>
                             <div className='flex sm:flex-row flex-col gap-4'>
-                                <input type="text" placeholder="Name" className='w-full p-4 rounded-md focus:outline-none focus:ring-2 focus:ring-primary shadow' />
-                                <input type="email" placeholder="Email Address" className='w-full p-4 rounded-md focus:outline-none focus:ring-2 focus:ring-primary shadow' />
+                                <input onChange={e => setName(e.target.value)} type="text" placeholder="Name" className='w-full p-4 rounded-md focus:outline-none focus:ring-2 focus:ring-primary shadow' />
+                                <input onChange={e => setEmail(e.target.value)} type="email" placeholder="Email Address" className='w-full p-4 rounded-md focus:outline-none focus:ring-2 focus:ring-primary shadow' />
                             </div>
                             <div className='flex sm:flex-row flex-col gap-4'>
-                                <input type="tel" placeholder="Contact Number" className='w-full p-4 rounded-md focus:outline-none focus:ring-2 focus:ring-primary shadow' />
-                                <input type="text" placeholder="Country" className='w-full p-4 rounded-md focus:outline-none focus:ring-2 focus:ring-primary shadow' />
+                                <input onChange={e => setPhone(e.target.value)} type="tel" placeholder="Contact Number" className='w-full p-4 rounded-md focus:outline-none focus:ring-2 focus:ring-primary shadow' />
+                                <input onChange={e => setCountry(e.target.value)} type="text" placeholder="Country" className='w-full p-4 rounded-md focus:outline-none focus:ring-2 focus:ring-primary shadow' />
                             </div>
-                            <textarea placeholder="Message" className="w-full p-4 rounded-md focus:outline-none focus:ring-2 focus:ring-primary shadow" rows="5" spellCheck="false"></textarea>
+                            <textarea onChange={e => setMessage(e.target.value)} placeholder="Message" className="w-full p-4 rounded-md focus:outline-none focus:ring-2 focus:ring-primary shadow" rows="5" ></textarea>
                             <button type='submit' className='w-full p-3 bg-primary text-white rounded-md hover:bg-green-600'>
                                 Send Message
                             </button>
@@ -99,7 +121,25 @@ const Contact = () => {
                     </div>
                 </div>
             </div>
+            {
+                showModal && (
+                    <div className='fixed inset-0 flex items-center justify-center bg-black bg-opacity-90'>
+                        <div className='bg-white pd-8 rounded-md shadow-lg'>
+                            <h2 className='text-2xl font-bold mb-4'>
+                                Thank you!
+                            </h2>
+                            <p>
+                                Thank you, {name}, for submitting your query.
+                            </p>
+                            <button onClick={closeModal} className='mt-4 px-4 py-2 bg-primary text-white rounded-md' >
+                                Close
+                            </button>
+                        </div>
+                    </div>
+                )
+            }
         </div>
+
     )
 }
 
