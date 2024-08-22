@@ -78,7 +78,7 @@ const Pricing = () => {
                 <ul className='list-disc list-inside space-y-2 mb-6'>
                   {
                     pkg.features.map((feature, idx) => (
-                      <li key={index}>
+                      <li key={idx}>
                         {feature}
                       </li>
                     ))
