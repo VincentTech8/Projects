@@ -22,7 +22,7 @@ const Contact = () => {
         console.log(data);
         
         // Check if any of the fields are empty
-        if (!data) {
+        if (!name || !email || !phone || !country || !message) {
             alert("Please fill all fields");
             return;
         }
@@ -110,14 +110,14 @@ const Contact = () => {
                         </h3>
                         <form onSubmit={handleSubmit} className='space-y-8'>
                             <div className='flex sm:flex-row flex-col gap-4'>
-                                <input onChange={e => setName(e.target.value)} type="text" placeholder="Name" className='w-full p-4 rounded-md focus:outline-none focus:ring-2 focus:ring-primary shadow' />
-                                <input onChange={e => setEmail(e.target.value)} type="email" placeholder="Email Address" className='w-full p-4 rounded-md focus:outline-none focus:ring-2 focus:ring-primary shadow' />
+                                <input value={name} onChange={e => setName(e.target.value)} type="text" placeholder="Name" className='w-full p-4 rounded-md focus:outline-none focus:ring-2 focus:ring-primary shadow' />
+                                <input value={email} onChange={e => setEmail(e.target.value)} type="email" placeholder="Email Address" className='w-full p-4 rounded-md focus:outline-none focus:ring-2 focus:ring-primary shadow' />
                             </div>
                             <div className='flex sm:flex-row flex-col gap-4'>
-                                <input onChange={e => setPhone(e.target.value)} type="tel" placeholder="Contact Number" className='w-full p-4 rounded-md focus:outline-none focus:ring-2 focus:ring-primary shadow' />
-                                <input onChange={e => setCountry(e.target.value)} type="text" placeholder="Country" className='w-full p-4 rounded-md focus:outline-none focus:ring-2 focus:ring-primary shadow' />
+                                <input value={phone} onChange={e => setPhone(e.target.value)} type="tel" placeholder="Contact Number" className='w-full p-4 rounded-md focus:outline-none focus:ring-2 focus:ring-primary shadow' />
+                                <input value={country} onChange={e => setCountry(e.target.value)} type="text" placeholder="Country" className='w-full p-4 rounded-md focus:outline-none focus:ring-2 focus:ring-primary shadow' />
                             </div>
-                            <textarea onChange={e => setMessage(e.target.value)} placeholder="Message" className="w-full p-4 rounded-md focus:outline-none focus:ring-2 focus:ring-primary shadow" rows="5" ></textarea>
+                            <textarea value={message} onChange={e => setMessage(e.target.value)} placeholder="Message" className="w-full p-4 rounded-md focus:outline-none focus:ring-2 focus:ring-primary shadow" rows="5" ></textarea>
                             <button type='submit' className='w-full p-3 bg-primary text-white rounded-md hover:bg-primary/90'>
                                 Send Message
                             </button>
