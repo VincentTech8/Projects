@@ -1,10 +1,14 @@
 import React from 'react'
 
+// Import Animation
+import { motion } from "framer-motion"
+import { fadeIn } from '../utils/AnimationVariants';
+
 const WorkingStep = () => {
     return (
         <div className='relative bg-cover bg-center py-12 bg-working-img'>
             <div className='absolute inset-0 bg-heroBg bg-opacity-90'></div>
-            <div className='relative container mx-auto px-8 py-20'>
+            <motion.div variants={fadeIn('up', 0.2)} initial="hidden" whileInView={"show"} viewport={{ once: false, amount: 0.7 }} className='relative container mx-auto px-8 py-20'>
                 <div className='text-white text-center mb-20'>
                     <h2 className='text-3xl font-bold mb-4'>
                         How It Works
@@ -48,7 +52,7 @@ const WorkingStep = () => {
                         </p>
                     </div>
                 </div>
-            </div>
+            </motion.div>
         </div>
     )
 }

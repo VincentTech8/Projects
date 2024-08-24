@@ -1,5 +1,9 @@
 import React from 'react'
 
+// Import Animation
+import { motion } from "framer-motion"
+import { fadeIn } from '../utils/AnimationVariants';
+
 const packages = [
   {
     name: 'Bronze Package',
@@ -49,16 +53,16 @@ const Pricing = () => {
   return (
     <div className='bg-[#f7f8fc] pt-32' id='pricing'>
       <div className='container mx-auto px-8'>
-        <div className='text-center mb-12'>
+        <motion.div variants={fadeIn('down', 0.2)} initial="hidden" whileInView={"show"} viewport={{ once: false, amount: 0.7 }} className='text-center mb-12'>
           <h2 className='text-4xl font-bold mb-3'>
             Perfect for Small & Large Brands
           </h2>
           <p className='text-lg mb-12 md:w-3/5 mx-auto'>
             Explore our mental wellness packages designed to support individuals and businesses in fostering a healthier mindset.
           </p>
-        </div>
+        </motion.div>
         {/* Packages / Prices */}
-        <div className='flex flex-col md:w-5/6 mx-auto md:flex-row gap-8'>
+        <motion.div variants={fadeIn('right', 0.2)} initial="hidden" whileInView={"show"} viewport={{ once: false, amount: 0.7 }} className='flex flex-col md:w-5/6 mx-auto md:flex-row gap-8'>
           {
             packages.map((pkg, index) => (
               <div key={index} className='bg-white rounded-lg p-6 flex-1 shadow-lg'>
@@ -90,7 +94,7 @@ const Pricing = () => {
               </div>
             ))
           }
-        </div>
+        </motion.div>
       </div>
     </div>
   )
