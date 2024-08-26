@@ -4,4 +4,4 @@ This section highlights a range of projects I've developed, each project demonst
 
 | No | Project Name | Project Description                              | Tech Stack             | Link |
 | :--: | ---------- | ------------------------------------------------ | ---------------------- | ---- |
-|  1   | Mind Leap  | A sleek, modern template designed for therapies. | React JS, Tailwind CSS | Soon |
+|  1   | Mind Leap  | A sleek, modern template designed for therapies. | React JS, Tailwind CSS | [Link](https://mindleap-deploy.vercel.app/) |
