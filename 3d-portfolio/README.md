@@ -11,3 +11,4 @@ Currently, two official plugins are available:
 [[Tutorial Link]](https://www.youtube.com/watch?v=0fYi8SGA20k)
 
 1. Create Vite Framework using React JS | npm create vite@latest ./ -- --template react
+2. Install Tailwind CSS (CLI method) | [Link](https://tailwindcss.com/docs/installation)
