@@ -29,7 +29,7 @@ const NavBar = () => {
                 <Link href={"/"} className="text-lg md:text-xl lg:text-2xl font-extrabold">
                     <span className='bg-clip-text text-transparent hover:opacity-80 bg-white'>
                         Vincent
-                        <span className='text-[#01EEFC]'>
+                        <span className='text-[#01EEFC] font-sans'>
                             .
                         </span>
                     </span>
