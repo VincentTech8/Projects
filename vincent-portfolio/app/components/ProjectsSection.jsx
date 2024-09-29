@@ -67,14 +67,11 @@ const projectsData = [
         image: "/images/projects/6.png",
         tag: ["All", "Other"],
         gitUrl: "/",
-        previewUrl: "/",
     },
 ];
 
 const ProjectsSection = () => {
     const [tag, setTag] = useState("All");
-    const ref = useRef(null);
-    const isInView = useInView(ref, { once: true });
 
     const handleTagChange = (newTag) => {
         setTag(newTag);
@@ -83,6 +80,11 @@ const ProjectsSection = () => {
     const filteredProjects = projectsData.filter((project) =>
         project.tag.includes(tag)
     );
+
+    // Animation
+
+    const ref = useRef(null);
+    const isInView = useInView(ref, { once: true });
 
     const cardVariants = {
         initial: { y: 50, opacity: 0 },
