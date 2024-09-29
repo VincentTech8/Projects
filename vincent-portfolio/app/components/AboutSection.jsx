@@ -157,7 +157,7 @@ import {
 const AboutSection = () => {
   return (
     <section>
-      <div className='min-h-[70vh] flex items-center justify-center py-12 xl:py-0'>
+      <div className='min-h-[80vh] flex items-center justify-center pt-14'>
         <div className="container mx-auto">
           <Tabs defaultValue='about' className='flex flex-col xl:flex-row gap-[60px]'>
             <TabsList className="flex flex-col w-full max-w-[380px] mx-auto xl:mx-0 gap-6">
