@@ -37,11 +37,11 @@ const HeroSection = () => {
                     <p className="text-[#C5C6C7] text-base sm:text-lg lg:text-xl mb-6">
                         "I can't change the direction of the wind, but I can adjust my sails to always reach my destination." #JimmyDean
                     </p>
-                    <div>
-                        <button className='px-6 py-3 w-[170px] xl:w-fit rounded-full sm:mr-4 text-black hover:opacity-80' style={{ backgroundImage: "linear-gradient(to right, #96EC98, #01EEFC)" }}>
+                    <div className='flex flex-col items-center justify-center xl:flex-row xl:items-start xl:justify-start'>
+                        <button className='px-6 py-3 w-[170px] xl:mr-3 xl:w-fit rounded-full text-black hover:opacity-80' style={{ backgroundImage: "linear-gradient(to right, #96EC98, #01EEFC)" }}>
                             Hire me
                         </button>
-                        <button className='px-6 py-3 w-[170px] xl:w-fit rounded-full bg-transparent hover:bg-slate-800 text-white border mt-3' style={{ borderColor: '#01EEFC' }}>
+                        <button className='px-6 py-3 w-[170px] xl:w-fit rounded-full bg-transparent hover:bg-slate-800 text-white border mt-3 xl:mt-0' style={{ borderColor: '#01EEFC' }}>
                             Download CV
                         </button>
                     </div>
