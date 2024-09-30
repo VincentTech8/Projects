@@ -44,7 +44,7 @@ const about = {
     },
     {
       fieldName: "Nationality",
-      fieldValue: "Indonesian",
+      fieldValue: "Indonesia",
     },
     {
       fieldName: "Language",
