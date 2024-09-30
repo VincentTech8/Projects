@@ -93,7 +93,7 @@ const ProjectsSection = () => {
 
     return (
         <section id="projects">
-            <div className="pt-14">
+            <div>
                 <h2 className="text-center text-4xl font-bold text-white mt-4 mb-5 md:mb-7">
                     My Projects
                 </h2>
