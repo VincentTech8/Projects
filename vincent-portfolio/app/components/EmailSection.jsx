@@ -1,7 +1,7 @@
 "use client";
 import React, { useState } from "react";
+import { FaGithub, FaLinkedin } from "react-icons/fa";
 import Link from "next/link";
-import Image from "next/image";
 
 const EmailSection = () => {
     const [emailSubmitted, setEmailSubmitted] = useState(false);
@@ -40,10 +40,9 @@ const EmailSection = () => {
     return (
         <section
             id="contact"
-            className="grid md:grid-cols-2 my-12 md:my-12 py-24 gap-4 relative"
+            className="grid xl:grid-cols-2 my-12 gap-4 relative pt-0 xl:pt-4"
         >
-            <div className="bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-primary-900 to-transparent rounded-full h-80 w-80 z-0 blur-lg absolute top-3/4 -left-4 transform -translate-x-1/2 -translate-1/2"></div>
-            <div className="z-10">
+            <div className="xl:min-h-[65vh]">
                 <h5 className="text-xl font-bold text-white my-2">
                     Let&apos;s Connect
                 </h5>
@@ -53,16 +52,26 @@ const EmailSection = () => {
                     open. Whether you have a question or just want to say hi, I&apos;ll
                     try my best to get back to you!
                 </p>
-                {/* <div className="socials flex flex-row gap-2">
-                    <Link href="github.com">
-                        <Image src="../../../public/linkedin-icon.svg" alt="Github Icon" />
+                <div className="socials flex flex-row gap-2 py-3">
+                    <Link
+                        href="https://www.linkedin.com/in/vincent-446b32190/"
+                        className="h-14 w-14 mr-2 border-2 relative rounded-full border-[#ADB7BE] hover:border-white group/link"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        <FaLinkedin className="h-10 w-10 text-[#ADB7BE] absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2  cursor-pointer group-hover/link:text-white" />
                     </Link>
-                    <Link href="linkedin.com">
-                        <Image src="../../../public/linkedin-icon.svg" alt="Linkedin Icon" />
+                    <Link
+                        href="https://github.com/VincentTech8"
+                        className="h-14 w-14 mr-2 border-2 relative rounded-full border-[#ADB7BE] hover:border-white group/link"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        <FaGithub className="h-10 w-10 text-[#ADB7BE] absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2  cursor-pointer group-hover/link:text-white" />
                     </Link>
-                </div> */}
+                </div>
             </div>
-            <div>
+            <div className="pb-10">
                 {emailSubmitted ? (
                     <p className="text-green-500 text-sm mt-2">
                         Email sent successfully!
@@ -117,7 +126,7 @@ const EmailSection = () => {
                         </div>
                         <button
                             type="submit"
-                            className="bg-primary-500 hover:bg-primary-600 text-white font-medium py-2.5 px-5 rounded-lg w-full"
+                            className="hover:opacity-80 text-black font-medium py-2.5 px-5 rounded-lg w-full" style={{ backgroundImage: "linear-gradient(to right, #96EC98, #01EEFC)" }}
                         >
                             Send Message
                         </button>
