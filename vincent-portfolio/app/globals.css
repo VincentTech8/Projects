@@ -21,7 +21,4 @@ body {
 /* The !important declaration is used to override any other color declarations that might apply to the same element */
 .isActive{
   color: #01EEFC !important;
-  border-bottom: 2px solid #01EEFC; /* Underline with 2px solid color */
-  padding-bottom: 2px; /* Add some space to ensure the text is not touching the underline */
-  transition: border-bottom 0.3s ease; /* Smooth transition for underline */
 }

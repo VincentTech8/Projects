@@ -26,10 +26,6 @@ const NavBar = () => {
     const [navbarOpen, setNavbarOpen] = useState(false);
     const [activeSection, setActiveSection] = useState('home');
 
-    const handleToggle = () => {
-        setNavbarOpen(!isOpen);
-    }
-
     const handleCloseMenu = () => {
         setNavbarOpen(false);
     }
@@ -78,7 +74,7 @@ const NavBar = () => {
                     handleCloseMenu();
                     handleScrollTo(sectionId);
                 }}
-                className={`text-white ${activeSection === sectionId ? 'isActive' : ''}`}>
+                className={`text-white hover:opacity-80 ${activeSection === sectionId ? 'isActive' : ''}`}>
                 {title}
             </motion.a>
         )
